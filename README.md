@@ -66,3 +66,42 @@ is currently applied to the lifetime measurement.
 
 This repository preserves a preliminary method-development
 analysis, not a finalized calibrated electron lifetime result.
+
+## Repository source organization
+
+### Current analysis — `src/`
+
+- `run_hit_based_v2_validation.py` — Current V2 electron lifetime analysis.
+
+### Previous and supporting scripts — `old/`
+
+Contains the earlier lifetime implementations, split-IO studies,
+packet-processing dependencies, and Brooke comparison plotting code.
+
+These scripts are retained for reproducibility.
+
+The current V2 driver automatically imports its required historical
+analysis dependencies from `old/`.
+
+To run the V2 mathematical self-test from the repository root:
+
+```bash
+python src/run_hit_based_v2_validation.py --self-test
+Full detector-data processing requires the appropriate NERSC environment,
+FLOW data, and selected-packet caches.
+
+
+## Brooke Russell — Electron Lifetime Reference
+
+**Presentation:** [ND Prototypes — Electron Lifetime,
+Brooke Russell (May 1, 2025)](
+https://docs.dunescience.org/cgi-bin/sso/RetrieveFile?docid=33816&filename=NDPrototypes_electron_lifetime___Russell___1May2025.pdf&version=1)
+
+**Comparison data:** [`references/brooke_digitized_approx.csv`](references/brooke_digitized_approx.csv)
+
+The CSV contains approximately digitized electron lifetime
+values used for comparison with the current hit-based analysis.
+
+The digitization and assumed timestamps are approximate.
+The reference presentation is provided for context; the exact
+source of each digitized point has not been independently verified.

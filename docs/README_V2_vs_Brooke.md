@@ -4,11 +4,11 @@ The plotting script overlays the three already-computed V2 lifetime time series 
 
 ## Provenance and warning
 
-The included `brooke_digitized_approx_v2.csv` contains **nine approximate slide digitizations**, with **assumed acquisition timestamps** inherited from a previous exploratory overlay. Brooke's underlying timestamps, run/file identifiers, and point uncertainties were not obtained. These are **not independently verified run matches**. A close-looking overlay can establish suggestive time-trend agreement, **not** point-by-point statistical agreement. The digitized points are shown as open diamonds, with NO invented Brooke error bars. Brooke's hit selection and grouping differ from the V2 exact n=2/n=3 population definitions.
+The included `brooke_digitized_approx.csv` contains **nine approximate slide digitizations**, with **assumed acquisition timestamps** inherited from a previous exploratory overlay. Brooke's underlying timestamps, run/file identifiers, and point uncertainties were not obtained. These are **not independently verified run matches**. A close-looking overlay can establish suggestive time-trend agreement, **not** point-by-point statistical agreement. The digitized points are shown as open diamonds, with NO invented Brooke error bars. Brooke's hit selection and grouping differ from the V2 exact n=2/n=3 population definitions.
 
 ## Install at NERSC
 
-Copy `plot_v2_vs_brooke_combined.py` and `brooke_digitized_approx_v2.csv` into:
+Copy `plot_v2_vs_brooke_combined.py` and `brooke_digitized_approx.csv` into:
 
 `/pscratch/sd/a/alqaisia/hit_based_LAST/`
 

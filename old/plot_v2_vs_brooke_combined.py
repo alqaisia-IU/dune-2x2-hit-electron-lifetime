@@ -30,7 +30,7 @@ def inputs():
     p.add_argument('--v2', type=Path, default=Path('hit_based_v2_full/v2_lifetime_timeline.csv'),
                    help='Output of run_hit_based_v2_validation.py')
     p.add_argument('--brooke', type=Path,
-                   default=Path(__file__).with_name('brooke_digitized_approx_v2.csv'),
+                   default=Path(__file__).with_name('brooke_digitized_approx.csv'),
                    help='Approximately digitized Brooke 2x2 slide lifetime points')
     p.add_argument('--outdir', type=Path, default=Path('hit_based_v2_full/brooke_overlay'))
     p.add_argument('--focus-max-ms', type=float, default=2.2,

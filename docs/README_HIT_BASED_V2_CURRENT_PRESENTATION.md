@@ -19,7 +19,7 @@
 | `packet_lifetime_final.py` | Provides `flow_ped_map`, channel `key`, `KE_PER_ADC` to the helper; older method itself is **not** V2 | **Yes (dependency)** |
 | `packet_lifetime_v3_brooke.py` | Provides the `fit_langau` Landau–Gaussian peak fitter used by the helper | **Yes (dependency)** |
 | `plot_v2_vs_brooke_combined.py` | Produces the qualitative overlay plots *from saved V2 CSV*, no refitting | Yes for presentations |
-| `brooke_digitized_approx_v2.csv` | Nine approximate Brooke slide points with **assumed** dates; not validated run matches | Yes for reproducing current overlay |
+| `brooke_digitized_approx.csv` | Nine approximate Brooke slide points with **assumed** dates; not validated run matches | Yes for reproducing current overlay |
 | `packet_lifetime_FROZEN.py` | Original MCLK / cached-IO6-selection supporting code | Keep for provenance / cache regeneration |
 | `run_paired_lifetime_timeline_io5_io6.py` | Previous IO5/IO6 timeline runner that generated IO6 selections | Keep for provenance / cache regeneration |
 | `README_HIT_BASED_V2_CURRENT_PRESENTATION.md` | This README | **Yes** |
@@ -41,7 +41,7 @@ ls -l \
   packet_lifetime_FROZEN.py \
   run_paired_lifetime_timeline_io5_io6.py \
   plot_v2_vs_brooke_combined.py \
-  brooke_digitized_approx_v2.csv
+  brooke_digitized_approx.csv
 
 # Once you have also copied this README into this directory:
 mkdir -p CURRENT_V2_CODE_SNAPSHOT
@@ -54,7 +54,7 @@ cp -p \
   packet_lifetime_FROZEN.py \
   run_paired_lifetime_timeline_io5_io6.py \
   plot_v2_vs_brooke_combined.py \
-  brooke_digitized_approx_v2.csv \
+  brooke_digitized_approx.csv \
   README_HIT_BASED_V2_CURRENT_PRESENTATION.md \
   CURRENT_V2_CODE_SNAPSHOT/
 
