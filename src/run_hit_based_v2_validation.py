@@ -24,6 +24,13 @@ import io
 import lzma
 import tarfile
 from pathlib import Path
+import sys
+
+# Historical analysis dependencies are preserved in old/.
+# This changes import locations, not the physics analysis.
+_OLD_DIR = Path(__file__).resolve().parents[1] / "old"
+if _OLD_DIR.is_dir():
+    sys.path.insert(0, str(_OLD_DIR))
 
 import numpy as np
 import pandas as pd
