@@ -33,3 +33,5 @@ frozen_hit_timeseries_bs20/
 .DS_Store
 Thumbs.db
 .vscode/
+/docs/
+/old/
