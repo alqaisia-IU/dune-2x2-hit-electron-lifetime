@@ -8,9 +8,9 @@ Exploratory electron lifetime measurement using charge packets from the DUNE 2x2
 
 ### General command (any user)
 
-Run this from a working directory containing the required packet-selection caches and analysis dependencies, using a Python environment with the required packages installed:
+Run this from a working directory containing the necessary analysis dependencies, selected-packet caches, and access to the DUNE 2x2 FLOW files:
 
-~~~bash
+```bash
 cd /path/to/your/analysis-working-directory
 conda activate YOUR_CONDA_ENVIRONMENT
 
@@ -19,13 +19,13 @@ python -u /path/to/run_hit_based_v2_validation.py \
   --daq-audit \
   --per-file-plots \
   --outdir /path/to/output-directory
-~~~
+```
 
-The script needs its supporting analysis modules, FLOW files, and cached inputs; the GitHub `src/` folder alone is not a standalone reproduction environment.
+The `src/` script requires supporting analysis modules and external detector-data files. This repository alone is not a standalone numerical rerun environment.
 
-### NERSC command (current analysis)
+### NERSC command (original analysis environment)
 
-~~~bash
+```bash
 cd /pscratch/sd/a/alqaisia/hit_based_LAST
 conda activate e-lifetime
 
@@ -34,9 +34,17 @@ python -u run_hit_based_v2_validation.py \
   --daq-audit \
   --per-file-plots \
   --outdir hit_based_v2_full
-~~~
+```
 
 ## Results
+
+The saved July 2024 lifetime measurements and comparisons are organized in three folders:
+
+- **[Current V2 results](results/v2/):** lifetime time series, per-IO/per-multiplicity charge MPVs, DAQ diagnostics, and plots comparing exact **n=2**, exact **n=3**, and shared **n=2+n=3** fits.
+- **[Comparison with Brooke Russell](results/brooke/):** overlay plots comparing our V2 lifetime estimates with Brooke's combined-detector results. Brooke's values are approximately digitized and the plotted timestamp pairings are assumed; this is a qualitative comparison, not a verified run-matched agreement test.
+- **[Earlier results](results/legacy/):** n=2 split-IO lifetime and MPV diagnostics retained for comparison.
+
+The combined n=2+n=3 fit uses separate charge normalizations for each IO group and multiplicity but a common attenuation lifetime. The n=3-only result has larger uncertainties and greater variation than n=2; adding n=3 generally has a modest effect on the shared fitted lifetime.
 
 ## Environment
 
